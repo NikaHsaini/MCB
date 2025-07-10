@@ -1,0 +1,1043 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Particules de fond quantiques */
+.quantum-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(0, 255, 255, 0.8) 0%,
+    rgba(255, 20, 147, 0.4) 70%,
+    transparent 100%);
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+  animation: bgParticleFloat 8s ease-in-out infinite;
+}
+
+.bg-particle-1 { top: 10%; left: 15%; animation-delay: 0s; animation-duration: 12s; }
+.bg-particle-2 { top: 20%; right: 20%; animation-delay: 1.5s; animation-duration: 10s; }
+.bg-particle-3 { top: 60%; left: 10%; animation-delay: 3s; animation-duration: 14s; }
+.bg-particle-4 { bottom: 25%; right: 15%; animation-delay: 4.5s; animation-duration: 11s; }
+.bg-particle-5 { top: 40%; left: 80%; animation-delay: 6s; animation-duration: 13s; }
+.bg-particle-6 { bottom: 40%; left: 25%; animation-delay: 7.5s; animation-duration: 9s; }
+.bg-particle-7 { top: 80%; right: 40%; animation-delay: 9s; animation-duration: 15s; }
+.bg-particle-8 { top: 30%; left: 60%; animation-delay: 10.5s; animation-duration: 8s; }
+
+@keyframes bgParticleFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) scale(1.2);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-15px) scale(0.8);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px) scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #FF3E8F 0%, #FF80AB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #a0a0b8;
+  margin-bottom: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.hero-cta {
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #FF3E8F 0%, #FF80AB 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 62, 143, 0.3);
+}
+
+.hero-visual {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Champ d'étoiles scintillantes */
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 62, 143, 0.8) 50%,
+    transparent 100%);
+  box-shadow: 0 0 6px rgba(255, 62, 143, 0.6);
+  animation: starTwinkle 3s ease-in-out infinite;
+}
+
+.star-1 { top: 15%; left: 20%; animation-delay: 0s; animation-duration: 4s; }
+.star-2 { top: 25%; right: 25%; animation-delay: 0.5s; animation-duration: 3.5s; }
+.star-3 { top: 60%; left: 15%; animation-delay: 1s; animation-duration: 5s; }
+.star-4 { bottom: 30%; right: 20%; animation-delay: 1.5s; animation-duration: 3s; }
+.star-5 { top: 40%; left: 80%; animation-delay: 2s; animation-duration: 4.5s; }
+.star-6 { bottom: 50%; left: 30%; animation-delay: 2.5s; animation-duration: 3.8s; }
+.star-7 { top: 70%; right: 35%; animation-delay: 3s; animation-duration: 4.2s; }
+.star-8 { top: 35%; left: 60%; animation-delay: 3.5s; animation-duration: 3.3s; }
+.star-9 { bottom: 20%; left: 70%; animation-delay: 4s; animation-duration: 4.8s; }
+.star-10 { top: 80%; left: 45%; animation-delay: 4.5s; animation-duration: 3.7s; }
+
+/* Atome Ultra-Amélioré */
+.atom-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  filter: drop-shadow(0 0 50px rgba(255, 62, 143, 0.3));
+}
+
+.atom {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  transform-style: preserve-3d;
+  animation: atomFloat 8s ease-in-out infinite;
+}
+
+/* Noyau Central Ultra-Détaillé */
+.atom-nucleus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.nucleus-core {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+.core-center {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 40% 30% at 30% 25%,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.4) 30%,
+      transparent 50%),
+    radial-gradient(ellipse 60% 40% at 35% 30%,
+      rgba(255, 62, 143, 1) 0%,
+      rgba(255, 128, 171, 0.9) 40%,
+      rgba(255, 80, 171, 0.7) 70%,
+      rgba(139, 0, 139, 0.8) 100%);
+  box-shadow:
+    /* Ombre portée principale */
+    0 15px 40px rgba(255, 62, 143, 0.6),
+    0 8px 20px rgba(255, 128, 171, 0.4),
+    /* Éclairage supérieur */
+    inset 0 -20px 30px rgba(139, 0, 139, 0.6),
+    /* Reflet principal */
+    inset -10px -15px 25px rgba(255, 255, 255, 0.3),
+    /* Reflet secondaire */
+    inset 15px 10px 20px rgba(255, 62, 143, 0.4),
+    /* Glow externe */
+    0 0 60px rgba(255, 62, 143, 0.8),
+    0 0 120px rgba(255, 128, 171, 0.4);
+  animation: spherePulse 4s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.core-layer-1 {
+  position: absolute;
+  width: 115%;
+  height: 115%;
+  top: -7.5%;
+  left: -7.5%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 50% 35% at 25% 20%,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.2) 40%,
+      transparent 60%),
+    radial-gradient(circle at 70% 80%,
+      rgba(255, 62, 143, 0.3) 0%,
+      rgba(255, 128, 171, 0.15) 50%,
+      transparent 70%);
+  box-shadow:
+    inset 0 0 20px rgba(255, 62, 143, 0.3),
+    inset -5px -8px 15px rgba(139, 0, 139, 0.4);
+  animation: sphereLayer1 5s ease-in-out infinite;
+}
+
+.core-layer-2 {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  top: -15%;
+  left: -15%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 15%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 30%,
+      transparent 50%),
+    radial-gradient(circle at 75% 85%,
+      rgba(255, 128, 171, 0.25) 0%,
+      rgba(255, 80, 171, 0.12) 50%,
+      transparent 70%);
+  box-shadow:
+    inset 0 0 25px rgba(255, 128, 171, 0.2),
+    inset -8px -12px 20px rgba(139, 0, 139, 0.3);
+  animation: sphereLayer2 6s ease-in-out infinite reverse;
+}
+
+.core-layer-3 {
+  position: absolute;
+  width: 145%;
+  height: 145%;
+  top: -22.5%;
+  left: -22.5%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 70% 45% at 15% 10%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.08) 25%,
+      transparent 40%),
+    radial-gradient(circle at 80% 90%,
+      rgba(255, 80, 171, 0.2) 0%,
+      rgba(255, 62, 143, 0.08) 50%,
+      transparent 70%);
+  box-shadow:
+    inset 0 0 30px rgba(255, 80, 171, 0.15),
+    inset -10px -15px 25px rgba(139, 0, 139, 0.25);
+  animation: sphereLayer3 7s ease-in-out infinite;
+}
+
+.nucleus-glow {
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  left: -40%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 25%,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 20%,
+      transparent 40%),
+    radial-gradient(circle at 50% 50%,
+      rgba(255, 62, 143, 0.25) 0%,
+      rgba(255, 128, 171, 0.15) 40%,
+      rgba(255, 80, 171, 0.08) 70%,
+      transparent 85%);
+  box-shadow:
+    0 0 40px rgba(255, 62, 143, 0.4),
+    0 0 80px rgba(255, 128, 171, 0.2);
+  animation: sphereGlow 4s ease-in-out infinite alternate;
+}
+
+.nucleus-pulse {
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    transparent 0%,
+    rgba(255, 62, 143, 0.1) 40%,
+    transparent 70%);
+  animation: nucleusPulseWave 4s ease-out infinite;
+}
+
+.nucleus-field {
+  position: absolute;
+  width: 250%;
+  height: 250%;
+  top: -75%;
+  left: -75%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255, 62, 143, 0.1) 45deg,
+    transparent 90deg,
+    rgba(255, 128, 171, 0.1) 135deg,
+    transparent 180deg,
+    rgba(255, 80, 171, 0.1) 225deg,
+    transparent 270deg,
+    rgba(255, 62, 143, 0.1) 315deg,
+    transparent 360deg
+  );
+  animation: fieldRotation 15s linear infinite;
+}
+
+/* Orbites Électroniques Améliorées */
+.electron-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  background: linear-gradient(transparent, transparent) padding-box,
+              linear-gradient(45deg, rgba(255, 62, 143, 0.4), rgba(255, 128, 171, 0.2), rgba(255, 80, 171, 0.4)) border-box;
+}
+
+.orbit-trail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 62, 143, 0.2);
+  box-shadow:
+    0 0 20px rgba(255, 62, 143, 0.3),
+    inset 0 0 20px rgba(255, 128, 171, 0.1);
+}
+
+.orbit-1 {
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
+  transform: rotateX(75deg) rotateY(0deg);
+  animation: orbitRotate1 12s linear infinite;
+}
+
+.orbit-2 {
+  width: 280px;
+  height: 280px;
+  margin: -140px 0 0 -140px;
+  transform: rotateX(60deg) rotateY(45deg);
+  animation: orbitRotate2 18s linear infinite;
+}
+
+.orbit-3 {
+  width: 360px;
+  height: 360px;
+  margin: -180px 0 0 -180px;
+  transform: rotateX(45deg) rotateY(90deg);
+  animation: orbitRotate3 24s linear infinite;
+}
+
+.orbit-4 {
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+  transform: rotateX(30deg) rotateY(135deg);
+  animation: orbitRotate4 30s linear infinite;
+}
+
+/* Électrons Ultra-Détaillés */
+.electron {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 62, 143, 0.9) 30%,
+    rgba(255, 128, 171, 0.7) 70%,
+    rgba(139, 0, 139, 0.5) 100%);
+  box-shadow:
+    0 0 20px rgba(255, 62, 143, 0.8),
+    0 0 40px rgba(255, 128, 171, 0.6),
+    0 0 60px rgba(255, 80, 171, 0.4);
+  animation: electronGlow 2s ease-in-out infinite alternate;
+}
+
+/* Positionnement des électrons sur les orbites */
+.electron-1-1 { top: -7px; left: 50%; margin-left: -7px; animation-delay: 0s; }
+.electron-1-2 { bottom: -7px; left: 50%; margin-left: -7px; animation-delay: 1s; }
+
+.electron-2-1 { top: -7px; left: 50%; margin-left: -7px; animation-delay: 0.3s; }
+.electron-2-2 { top: 50%; right: -7px; margin-top: -7px; animation-delay: 1.3s; }
+.electron-2-3 { bottom: -7px; left: 50%; margin-left: -7px; animation-delay: 2.3s; }
+
+.electron-3-1 { top: -7px; left: 50%; margin-left: -7px; animation-delay: 0.6s; }
+.electron-3-2 { top: 50%; right: -7px; margin-top: -7px; animation-delay: 1.6s; }
+.electron-3-3 { bottom: -7px; left: 50%; margin-left: -7px; animation-delay: 2.6s; }
+.electron-3-4 { top: 50%; left: -7px; margin-top: -7px; animation-delay: 3.6s; }
+
+.electron-4-1 { top: -7px; left: 50%; margin-left: -7px; animation-delay: 0.9s; }
+.electron-4-2 { bottom: -7px; left: 50%; margin-left: -7px; animation-delay: 1.9s; }
+
+/* Champs Énergétiques */
+.energy-field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255, 62, 143, 0.1) 30deg,
+    transparent 60deg,
+    rgba(255, 128, 171, 0.1) 90deg,
+    transparent 120deg,
+    rgba(255, 80, 171, 0.1) 150deg,
+    transparent 180deg,
+    rgba(255, 62, 143, 0.1) 210deg,
+    transparent 240deg,
+    rgba(255, 128, 171, 0.1) 270deg,
+    transparent 300deg,
+    rgba(255, 80, 171, 0.1) 330deg,
+    transparent 360deg
+  );
+  animation: fieldPulse 8s ease-in-out infinite;
+}
+
+.field-1 {
+  width: 480px;
+  height: 480px;
+  margin: -240px 0 0 -240px;
+  animation-delay: 0s;
+  opacity: 0.6;
+}
+
+.field-2 {
+  width: 400px;
+  height: 400px;
+  margin: -200px 0 0 -200px;
+  animation-delay: 2s;
+  opacity: 0.5;
+}
+
+.field-3 {
+  width: 320px;
+  height: 320px;
+  margin: -160px 0 0 -160px;
+  animation-delay: 4s;
+  opacity: 0.4;
+}
+
+.field-4 {
+  width: 240px;
+  height: 240px;
+  margin: -120px 0 0 -120px;
+  animation-delay: 6s;
+  opacity: 0.3;
+}
+
+/* Particules Quantiques Flottantes */
+.quantum-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 62, 143, 0.9) 40%,
+    rgba(255, 128, 171, 0.6) 80%,
+    transparent 100%);
+  box-shadow:
+    0 0 15px rgba(255, 62, 143, 0.8),
+    0 0 30px rgba(255, 128, 171, 0.4);
+  animation: particleFloat 6s ease-in-out infinite;
+}
+
+.particle-1 { top: 10%; left: 15%; animation-delay: 0s; animation-duration: 8s; }
+.particle-2 { top: 20%; right: 20%; animation-delay: 1s; animation-duration: 7s; }
+.particle-3 { top: 70%; left: 10%; animation-delay: 2s; animation-duration: 9s; }
+.particle-4 { bottom: 25%; right: 15%; animation-delay: 3s; animation-duration: 6s; }
+.particle-5 { top: 40%; left: 85%; animation-delay: 4s; animation-duration: 10s; }
+.particle-6 { bottom: 40%; left: 20%; animation-delay: 5s; animation-duration: 8s; }
+.particle-7 { top: 80%; right: 30%; animation-delay: 6s; animation-duration: 7s; }
+.particle-8 { top: 30%; left: 70%; animation-delay: 7s; animation-duration: 9s; }
+
+/* Rayons d'Énergie */
+.energy-ray {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 150px;
+  background: linear-gradient(to top,
+    transparent 0%,
+    rgba(255, 62, 143, 0.8) 20%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 128, 171, 0.8) 80%,
+    transparent 100%);
+  transform-origin: bottom center;
+  animation: rayPulse 4s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 62, 143, 0.6);
+}
+
+.ray-1 {
+  --ray-angle: 0deg;
+  transform: translate(-50%, -100%) rotate(0deg);
+  animation-delay: 0s;
+}
+.ray-2 {
+  --ray-angle: 60deg;
+  transform: translate(-50%, -100%) rotate(60deg);
+  animation-delay: 0.7s;
+}
+.ray-3 {
+  --ray-angle: 120deg;
+  transform: translate(-50%, -100%) rotate(120deg);
+  animation-delay: 1.4s;
+}
+.ray-4 {
+  --ray-angle: 180deg;
+  transform: translate(-50%, -100%) rotate(180deg);
+  animation-delay: 2.1s;
+}
+.ray-5 {
+  --ray-angle: 240deg;
+  transform: translate(-50%, -100%) rotate(240deg);
+  animation-delay: 2.8s;
+}
+.ray-6 {
+  --ray-angle: 300deg;
+  transform: translate(-50%, -100%) rotate(300deg);
+  animation-delay: 3.5s;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes ringRotate1 {
+  0% {
+    transform: rotateX(80deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(80deg) rotateY(360deg);
+  }
+}
+
+@keyframes ringRotate2 {
+  0% {
+    transform: rotateX(65deg) rotateY(10deg);
+  }
+  100% {
+    transform: rotateX(65deg) rotateY(370deg);
+  }
+}
+
+@keyframes ringRotate3 {
+  0% {
+    transform: rotateX(50deg) rotateY(20deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(380deg);
+  }
+}
+
+@keyframes electronFloat {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  .hero-content {
+    margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .atom-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .atom {
+    width: 200px;
+    height: 200px;
+  }
+
+  .core-inner {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ring-1 {
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+  }
+
+  .ring-2 {
+    width: 180px;
+    height: 180px;
+    margin: -90px 0 0 -90px;
+  }
+
+  .ring-3 {
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+  }
+}
+
+/* Animations Ultra-Avancées pour l'Étoile */
+@keyframes atomFloat {
+  0%, 100% {
+    transform: translateY(0) rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    transform: translateY(-30px) rotateY(180deg) rotateX(0deg);
+  }
+  75% {
+    transform: translateY(-15px) rotateY(270deg) rotateX(-5deg);
+  }
+}
+
+@keyframes spherePulse {
+  0%, 100% {
+    transform: scale(1) rotateY(0deg) rotateX(0deg);
+    box-shadow:
+      /* Ombre portée principale */
+      0 15px 40px rgba(255, 62, 143, 0.6),
+      0 8px 20px rgba(255, 128, 171, 0.4),
+      /* Éclairage supérieur */
+      inset 0 -20px 30px rgba(139, 0, 139, 0.6),
+      /* Reflet principal */
+      inset -10px -15px 25px rgba(255, 255, 255, 0.3),
+      /* Reflet secondaire */
+      inset 15px 10px 20px rgba(255, 62, 143, 0.4),
+      /* Glow externe */
+      0 0 60px rgba(255, 62, 143, 0.8),
+      0 0 120px rgba(255, 128, 171, 0.4);
+  }
+  25% {
+    transform: scale(1.03) rotateY(90deg) rotateX(5deg);
+    box-shadow:
+      0 18px 45px rgba(255, 62, 143, 0.7),
+      0 10px 25px rgba(255, 128, 171, 0.5),
+      inset 0 -25px 35px rgba(139, 0, 139, 0.7),
+      inset -12px -18px 30px rgba(255, 255, 255, 0.4),
+      inset 18px 12px 25px rgba(255, 62, 143, 0.5),
+      0 0 70px rgba(255, 62, 143, 0.9),
+      0 0 140px rgba(255, 128, 171, 0.5);
+  }
+  50% {
+    transform: scale(1.06) rotateY(180deg) rotateX(0deg);
+    box-shadow:
+      0 20px 50px rgba(255, 62, 143, 0.8),
+      0 12px 30px rgba(255, 128, 171, 0.6),
+      inset 0 -30px 40px rgba(139, 0, 139, 0.8),
+      inset -15px -20px 35px rgba(255, 255, 255, 0.5),
+      inset 20px 15px 30px rgba(255, 62, 143, 0.6),
+      0 0 80px rgba(255, 62, 143, 1),
+      0 0 160px rgba(255, 128, 171, 0.6);
+  }
+  75% {
+    transform: scale(1.03) rotateY(270deg) rotateX(-5deg);
+    box-shadow:
+      0 18px 45px rgba(255, 62, 143, 0.7),
+      0 10px 25px rgba(255, 128, 171, 0.5),
+      inset 0 -25px 35px rgba(139, 0, 139, 0.7),
+      inset -12px -18px 30px rgba(255, 255, 255, 0.4),
+      inset 18px 12px 25px rgba(255, 62, 143, 0.5),
+      0 0 70px rgba(255, 62, 143, 0.9),
+      0 0 140px rgba(255, 128, 171, 0.5);
+  }
+}
+
+@keyframes sphereLayer1 {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1) rotateY(0deg) rotateZ(0deg);
+    box-shadow:
+      inset 0 0 20px rgba(255, 62, 143, 0.3),
+      inset -5px -8px 15px rgba(139, 0, 139, 0.4);
+  }
+  33% {
+    opacity: 1;
+    transform: scale(1.05) rotateY(120deg) rotateZ(60deg);
+    box-shadow:
+      inset 0 0 25px rgba(255, 62, 143, 0.4),
+      inset -8px -12px 20px rgba(139, 0, 139, 0.5);
+  }
+  66% {
+    opacity: 0.9;
+    transform: scale(1.02) rotateY(240deg) rotateZ(120deg);
+    box-shadow:
+      inset 0 0 22px rgba(255, 62, 143, 0.35),
+      inset -6px -10px 18px rgba(139, 0, 139, 0.45);
+  }
+}
+
+@keyframes sphereLayer2 {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1) rotateY(360deg) rotateZ(0deg);
+    box-shadow:
+      inset 0 0 25px rgba(255, 128, 171, 0.2),
+      inset -8px -12px 20px rgba(139, 0, 139, 0.3);
+  }
+  33% {
+    opacity: 0.8;
+    transform: scale(1.08) rotateY(240deg) rotateZ(-60deg);
+    box-shadow:
+      inset 0 0 30px rgba(255, 128, 171, 0.3),
+      inset -12px -16px 25px rgba(139, 0, 139, 0.4);
+  }
+  66% {
+    opacity: 0.7;
+    transform: scale(1.04) rotateY(120deg) rotateZ(-120deg);
+    box-shadow:
+      inset 0 0 28px rgba(255, 128, 171, 0.25),
+      inset -10px -14px 22px rgba(139, 0, 139, 0.35);
+  }
+}
+
+@keyframes sphereLayer3 {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg) rotateZ(0deg);
+    box-shadow:
+      inset 0 0 30px rgba(255, 80, 171, 0.15),
+      inset -10px -15px 25px rgba(139, 0, 139, 0.25);
+  }
+  33% {
+    opacity: 0.7;
+    transform: scale(1.1) rotateY(120deg) rotateZ(90deg);
+    box-shadow:
+      inset 0 0 35px rgba(255, 80, 171, 0.2),
+      inset -15px -20px 30px rgba(139, 0, 139, 0.35);
+  }
+  66% {
+    opacity: 0.6;
+    transform: scale(1.06) rotateY(240deg) rotateZ(180deg);
+    box-shadow:
+      inset 0 0 32px rgba(255, 80, 171, 0.18),
+      inset -12px -18px 28px rgba(139, 0, 139, 0.3);
+  }
+}
+
+@keyframes sphereGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1) rotateY(0deg);
+    box-shadow:
+      0 0 40px rgba(255, 62, 143, 0.4),
+      0 0 80px rgba(255, 128, 171, 0.2);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(1.1) rotateY(90deg);
+    box-shadow:
+      0 0 50px rgba(255, 62, 143, 0.5),
+      0 0 100px rgba(255, 128, 171, 0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotateY(180deg);
+    box-shadow:
+      0 0 60px rgba(255, 62, 143, 0.6),
+      0 0 120px rgba(255, 128, 171, 0.4);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scale(1.1) rotateY(270deg);
+    box-shadow:
+      0 0 50px rgba(255, 62, 143, 0.5),
+      0 0 100px rgba(255, 128, 171, 0.3);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1) rotateY(360deg);
+    box-shadow:
+      0 0 40px rgba(255, 62, 143, 0.4),
+      0 0 80px rgba(255, 128, 171, 0.2);
+  }
+}
+
+@keyframes nucleusPulseWave {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes fieldRotation {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.7;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes orbitRotate1 {
+  0% {
+    transform: rotateX(75deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(75deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbitRotate2 {
+  0% {
+    transform: rotateX(60deg) rotateY(45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotateY(405deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes orbitRotate3 {
+  0% {
+    transform: rotateX(45deg) rotateY(90deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(45deg) rotateY(450deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbitRotate4 {
+  0% {
+    transform: rotateX(30deg) rotateY(135deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(30deg) rotateY(495deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes electronGlow {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+    box-shadow:
+      0 0 20px rgba(255, 62, 143, 0.8),
+      0 0 40px rgba(255, 128, 171, 0.6),
+      0 0 60px rgba(255, 80, 171, 0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+    box-shadow:
+      0 0 30px rgba(255, 62, 143, 1),
+      0 0 60px rgba(255, 128, 171, 0.8),
+      0 0 90px rgba(255, 80, 171, 0.6);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+    box-shadow:
+      0 0 20px rgba(255, 62, 143, 0.8),
+      0 0 40px rgba(255, 128, 171, 0.6),
+      0 0 60px rgba(255, 80, 171, 0.4);
+  }
+}
+
+@keyframes fieldPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 0.5;
+    transform: scale(1.05) rotate(90deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1) rotate(180deg);
+  }
+  75% {
+    opacity: 0.5;
+    transform: scale(1.05) rotate(270deg);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) scale(1.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-5px) scale(0.8);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-20px) translateX(-10px) scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes rayPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translate(-50%, -100%) rotate(var(--ray-angle)) scaleY(1);
+    box-shadow: 0 0 10px rgba(255, 62, 143, 0.6);
+  }
+  25% {
+    opacity: 0.7;
+    transform: translate(-50%, -100%) rotate(var(--ray-angle)) scaleY(1.2);
+    box-shadow: 0 0 15px rgba(255, 62, 143, 0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -100%) rotate(var(--ray-angle)) scaleY(1.5);
+    box-shadow: 0 0 20px rgba(255, 62, 143, 1);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translate(-50%, -100%) rotate(var(--ray-angle)) scaleY(1.2);
+    box-shadow: 0 0 15px rgba(255, 62, 143, 0.8);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+    box-shadow: 0 0 6px rgba(255, 62, 143, 0.6);
+  }
+  25% {
+    opacity: 0.7;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 62, 143, 0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(255, 62, 143, 1);
+  }
+  75% {
+    opacity: 0.6;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(255, 62, 143, 0.7);
+  }
+}
+
+
+
+

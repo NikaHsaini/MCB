@@ -1,0 +1,21 @@
+.greencoin-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.greencoin-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.greencoin-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,105 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.main-content {
+  padding-top: 80px;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation pour les transitions entre sections */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+/* Styles pour les boutons génériques */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #FF3E8F 0%, #FF80AB 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Styles pour les conteneurs de section */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Styles pour les titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Styles pour les textes */
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Styles pour les liens */
+a {
+  color: #FF80AB;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #FF3E8F;
+}
+
+/* Media queries pour le responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px;
+  }
+  
+  .section-container {
+    padding: 1rem;
+  }
+}
